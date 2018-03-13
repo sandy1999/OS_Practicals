@@ -19,7 +19,6 @@ public:
 	void schedule_preemtive();
 	void print_gantt_chart(Process p[], int n);
 	void calculate_total_burst_time(Process p[], int n);
-	void compute_sjf_process_array(Process p[], int n);
 	void copy_array(Process p1[],Process p2[], int n);
 };
 

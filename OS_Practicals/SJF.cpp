@@ -111,10 +111,10 @@ void SJF::print_gantt_chart(Process p[], int n)
 		{
 			while (count_time <=total_burst_time)
 			{
-				compute_sjf_process_array(p, n);
+				sort_by_burst_time(p, n);
 				for (int i = 0; i < n;i++)
 				{
-					compute_sjf_process_array(p, n);
+					sort_by_burst_time(p, n);
 					if (p[i].burst_time != 0 && count_time > n)
 					{
 						p[i].completion_time = count_time + p[i].burst_time;
@@ -149,9 +149,4 @@ void SJF::copy_array(Process p1[],Process p2[], int n)
 	{
 		p2[i] = p1[i];
 	}
-}
-
-void SJF::compute_sjf_process_array(Process p[], int n)
-{
-	sort_by_burst_time(p, n);
 }
