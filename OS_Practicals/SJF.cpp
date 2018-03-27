@@ -19,7 +19,7 @@ void SJF::schedule_preemtive()
 {
 	Process p[MAX_PROCESS];
 	int n;
-	puts("Enter total number of process \n");
+	puts("Enter total number of process");
 	cin >> n;
 	cout << "Enter burst time for each process \n";
 	for (int i = 0; i < n; i++)
